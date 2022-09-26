@@ -42,6 +42,7 @@ const Header: NextPage = () => {
       }
 
       setDrawerOpen(open)
+      setOpen(false)
     };
 
 

@@ -1,0 +1,54 @@
+/* <------Facts------> */
+.facts__container {
+    background: #fffdf5;
+    width: 100%;
+    z-index: 9999999999;
+    margin-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.facts__container h2 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #383434;
+}
+.facts__inner__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fact__item1, .fact__item2, .fact__item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 2px;
+    padding: 20px;
+}
+.fact__item1 {
+    background: #F8EAE8;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #F19779;
+}
+.fact__item2 {
+    background: #F2F8EA;
+    color: #A9CC77;
+}
+.fact__item3 {
+    background: #EFEBE9;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #B1A09A;
+}
+.fact__img__container {
+    width: 200px;
+}

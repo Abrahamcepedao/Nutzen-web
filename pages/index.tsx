@@ -9,13 +9,14 @@ import Plate1 from '../public/img/landing/nutzen.png'
 import Plate2 from '../public/img/landing/nutzen2.png'
 import Plate3 from '../public/img/landing/nutzen3.png'
 
+
 /* CSS */
 import styles from '../styles/Home.module.css'
 
 /* Components */
 import Header from '../components/Header'
-
-/* Material UI */
+import Facts from '../components/Facts'
+import Products from '../components/Products'
 
 const Home: NextPage = () => {
   return (
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
 
         {/* landing */}
         {/* wave */}
-        <div className={styles.waves__container}>
+        <div className={styles.waves__container1}>
           <Image className={styles.wave1} src={Waves1} alt=""/>
         </div>
 
@@ -61,19 +62,17 @@ const Home: NextPage = () => {
         </div>
 
         {/* wave */}
-        <div className={styles.waves__container}>
+        <div className={styles.waves__container2}>
           <Image className={styles.wave2} src={Waves1} alt=""/>
         </div>
 
         
 
         {/* Facts */}
-        <div className={styles.facts__container}>
+        <Facts />
 
-        </div>
-
-
-
+        {/* Products */}
+        <Products />
 
         
       </main>
