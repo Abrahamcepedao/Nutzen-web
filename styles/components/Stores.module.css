@@ -1,0 +1,36 @@
+.stores {
+    padding: 100px 20px;
+    text-align: center;
+    background: #fffdf5;
+}
+.stores h5 {
+    color: #9C713F;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: -40px;
+}
+.stores h3 {
+    color: #383434;
+    font-size: 45px;
+    font-weight: bold;
+}
+.stores__container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20px;
+    padding-top: 50px;
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.store__img__container {
+    width: 200px;
+    margin: auto;
+}
+.store__img__container {
+    transition: transform 450ms;
+    cursor: pointer;
+}
+.store__img__container:hover {
+    transform: scale(1.1);
+}

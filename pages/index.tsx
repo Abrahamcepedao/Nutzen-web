@@ -17,6 +17,8 @@ import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Facts from '../components/Facts'
 import Products from '../components/Products'
+import Recetas from '../components/Recetas'
+import Stores from '../components/Stores'
 
 const Home: NextPage = () => {
   return (
@@ -74,7 +76,13 @@ const Home: NextPage = () => {
         {/* Products */}
         <Products />
 
-        
+        {/* Recetas */}
+        <Recetas />
+
+        {/* Stores */}
+        <Stores />
+
+
       </main>
 
       <footer className={styles.footer}>

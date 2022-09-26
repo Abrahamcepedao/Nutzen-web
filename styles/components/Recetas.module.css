@@ -1,0 +1,59 @@
+.recetas__container {
+    width: 100%;
+    height: 70vh;
+    background-image: url('../../public/img/landing/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: -40px;
+}
+.recetas__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.recetas__overlay h2 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.recetas__btn {
+  background: #FF5454;
+  color: #fffdf5;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 450ms;
+  cursor: pointer;
+}
+.recetas__btn:hover {
+  transform: scale(1.1);
+}
+
+/* Waves */
+.waves__container1, .waves__container2 {
+  width: 100%;
+  height: 20px;
+}
+.waves__container1 {
+  z-index: 9;
+}
+.waves__container2 {
+  margin-bottom: 40px;
+}
+/* waves */
+.wave1, .wave2 {
+  z-index: 7;
+  width: 100vw !important;
+}
+.wave1 {
+  transform: rotate(180deg);
+}
