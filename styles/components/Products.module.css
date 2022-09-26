@@ -1,0 +1,119 @@
+/* Product container */
+.products__container {
+    background: #fffdf5;
+    width: 100%;
+    padding: 50px 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.products__container h2 {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #383434;
+}
+
+/* Products */
+.product__container1, .product__container2 {
+    border-radius: 10px;
+}
+.product__container1 {
+    background: #FCF2E6;
+    margin-bottom: 20px;
+}
+.product__container2 {
+    background: #FFE7E2;
+}
+/* top */
+.product__top {
+    display: flex;
+    justify-content: space-center;
+    align-items: center;
+    padding: 50px;
+}
+.product__img {
+    width: 50%;
+}
+.product__info1 {
+    padding-left: 50px;
+}
+.product__info1 h3, .product__info2 h3{
+    font-size: 120px;
+    font-weight: bold;
+    text-shadow: 5px 5px 0px #fff;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
+.product__info1 h3 {
+    color: #9C713F;
+}
+.product__info2 h3 {
+    color: #C65E4D;
+}
+.product__info1 h5, .product__info2 h5 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: -15px;
+}
+.product__info1 h5 {
+    color: #9C713F;
+}
+.product__info2 h5 {
+    color: #C65E4D;
+}
+.product__info1 p, .product__info2 p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.product__info1 p {
+    color: #E8CAA6;
+}
+.product__info2 p {
+    color: #F4AEA1;
+}
+.product__quote {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 580px;
+}
+.product__icon1, .product__icon2 {
+    font-size: 120px;
+    margin-right: 10px;
+}
+.product__icon1 {
+    color: #9C713F;
+}
+.product__icon2 {
+    color: #C65E4D;
+}
+.product__quote p {
+    font-size: 30px;
+}
+
+/* bottom */
+.product__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 50px;
+}
+.product__fact, .product__fact2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product__fact__img {
+    width: 60px;
+}
+.product__fact h4, .product__fact2 h4 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.product__fact h4 {
+    color: #E8CAA6;
+}
+.product__fact2 h4 {
+    color: #F4AEA1;
+}
