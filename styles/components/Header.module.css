@@ -18,6 +18,10 @@
     color: #383434;
     font-size: 30px;
     margin-left: 10px;
+    transition: transform 450ms;
+}
+.icon:hover {
+    transform: scale(1.1);
 }
 .drawer {
     background: white;
