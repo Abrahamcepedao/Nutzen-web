@@ -19,6 +19,7 @@ import Facts from '../components/Facts'
 import Products from '../components/Products'
 import Recetas from '../components/Recetas'
 import Stores from '../components/Stores'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -82,6 +83,8 @@ const Home: NextPage = () => {
         {/* Stores */}
         <Stores />
 
+        {/* Footer */}
+        <Footer />
 
       </main>
 
