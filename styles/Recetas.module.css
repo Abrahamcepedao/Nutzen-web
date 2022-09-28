@@ -1,0 +1,108 @@
+.main {
+  min-height: 100vh;
+  background: #FCF2E6;
+}
+
+/* landing */
+.waves__container1{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 60px;
+  z-index: 9;
+  margin-bottom: 150px;
+}
+/* waves */
+.wave1 {
+  z-index: 7;
+  width: 100vw !important;
+}
+.wave1 {
+  transform: rotate(180deg);
+}
+
+/* landing info */
+.title__container {
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 120px;
+}
+.title {
+    font-size: 45px;
+    color: #383434;
+}
+
+/* Filters */
+.filters__inner__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    color: #383434;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    font-weight: 600;
+}
+.filter__item {
+    width: 200px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 450ms;
+    box-shadow: 0 14px 20px -6px rgb(76 79 106 / 30%);
+}
+.filter__item:hover {
+    transform: scale(1.1);
+}
+
+
+/* Recetas */
+.recetas__container {
+    width: 100%;
+    padding: 50px 20px;
+}
+.recetas__inner__container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.receta__container {
+    //width: 220px;
+    background: white;
+    border-radius: 10px;
+}
+.receta__img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    background-image: url('../public/img/recipes/recipe1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.receta__container h4 {
+    color: #383434;
+    margin-left: 20px;
+}
+.receta__container button {
+    background: #FF5454;
+    color: #fffdf5;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 450ms;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.receta__container button:hover {
+    transform: scale(1.1);
+}

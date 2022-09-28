@@ -11,7 +11,7 @@ import Tienda3 from '../public/img/landing/stores/vps.svg'
 
 const Stores: NextPage = () => {
     return (
-        <div className={styles.stores}>
+        <div className={styles.stores} id="tiendas">
             <h5>Tiendas</h5>
             <h3>¿Dónde nos encontramos?</h3>
             <div className={styles.stores__container}>
