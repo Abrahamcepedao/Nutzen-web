@@ -1,11 +1,12 @@
 .footer {
-    background: #FCF2E6;
+    //background: #FCF2E6;
+    background: #fffdf5;
 }
 /* Waves */
 .wave__container {
   width: 100%;
-  height: 70px;
-  background: #fffdf5;
+  height: 40px;
+  background: #FCF2E6;
 }
 .wave {
   z-index: 7;

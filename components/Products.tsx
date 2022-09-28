@@ -19,7 +19,7 @@ const Products: NextPage = () => {
     
     
     return (
-        <div className={styles.products__container}>
+        <div className={styles.products__container} id="productos">
           <h2>Descubre nuestros productos</h2>
           <div className={styles.product__container1}>
             {/* top */}
