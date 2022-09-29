@@ -87,10 +87,10 @@ const Home: NextPage = () => {
         <div className={styles.recetas__container}>
             <div className={styles.recetas__inner__container}>
                 {filteredRecipes.map(recipe => (
-                    <div className={styles.receta__container}>
+                    <div key={recipe.id} className={styles.receta__container}>
                         <div className={styles.receta__img}></div>
                         <h4>{recipe.title}</h4>
-                        <Link href={""}>
+                        <Link href={`/receta/${recipe.id}`}>
                             <button>Ver receta</button>
                         </Link>
                     </div>
