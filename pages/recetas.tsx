@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 /* Images */
 import Image from 'next/image'
 import Waves1 from '../public/img/landing/wave1.svg'
-import Logo from '../public/img/landing/nutzen_logo.png'
 
 /* CSS */
 import styles from '../styles/Recetas.module.css'
@@ -13,7 +13,36 @@ import styles from '../styles/Recetas.module.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+/* Data */
+import { recipes } from '../data/recipes'
+
 const Home: NextPage = () => {
+    const [filter, setFilter] = useState('all')
+    const [filteredRecipes, setFilteredRecipes] = useState(recipes)
+
+    useEffect(() => {
+        if (filter === 'all') {
+            setFilteredRecipes(recipes)
+        } else {
+            setFilteredRecipes(recipes.filter(recipe => recipe.type === filter))
+        }
+    }, [filter])
+
+
+    const handleFilterChange = (value: string) => {
+        if (value === 'all') {
+            setFilter('all')
+            setFilteredRecipes(recipes);
+        } else {
+            let data = recipes.filter(recipe => recipe.type === value)
+            setFilter(value)
+            setFilteredRecipes(data)
+        }
+    }
+    
+
+
+
   return (
     <div>
       <Head>
@@ -40,43 +69,32 @@ const Home: NextPage = () => {
         {/* Filters */}
         <div className={styles.filters__container}>
             <div className={styles.filters__inner__container}>
-                <div className={styles.filter__item}>
+                <div className={styles.filter__item} style={{background: filter === "all" ? "#FF5454" : "#fffdf5", color: filter === "all" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("all")}}>
+                    <p>Todos</p>
+                </div>
+                <div className={styles.filter__item} style={{background: filter === "Desayunos" ? "#FF5454" : "#fffdf5", color: filter === "Desayunos" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Desayunos")}}>
                     <p>Desayunos</p>
                 </div>
-                <div className={styles.filter__item}>
+                <div className={styles.filter__item} style={{background: filter === "Snacks" ? "#FF5454" : "#fffdf5", color: filter === "Snacks" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Snacks")}}>
                     <p>Snacks</p>
                 </div>
-                <div className={styles.filter__item}>
+                <div className={styles.filter__item} style={{background: filter === "Postres" ? "#FF5454" : "#fffdf5", color: filter === "Postres" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Postres")}}>
                     <p>Postres</p>
-                </div>
-                <div className={styles.filter__item}>
-                    <p>Pasteles y panques</p>
                 </div>
             </div>
         </div>
 
         <div className={styles.recetas__container}>
             <div className={styles.recetas__inner__container}>
-                <div className={styles.receta__container}>
-                    <div className={styles.receta__img}></div>
-                    <h4>Título de receta</h4>
-                    <button>Ver receta</button>
-                </div>
-                <div className={styles.receta__container}>
-                    <div className={styles.receta__img}></div>
-                    <h4>Título de receta</h4>
-                    <button>Ver receta</button>
-                </div>
-                <div className={styles.receta__container}>
-                    <div className={styles.receta__img}></div>
-                    <h4>Título de receta</h4>
-                    <button>Ver receta</button>
-                </div>
-                <div className={styles.receta__container}>
-                    <div className={styles.receta__img}></div>
-                    <h4>Título de receta</h4>
-                    <button>Ver receta</button>
-                </div>
+                {filteredRecipes.map(recipe => (
+                    <div className={styles.receta__container}>
+                        <div className={styles.receta__img}></div>
+                        <h4>{recipe.title}</h4>
+                        <Link href={""}>
+                            <button>Ver receta</button>
+                        </Link>
+                    </div>
+                ))}
             </div>
         </div>
 

@@ -26,7 +26,7 @@
     width: 95%;
     max-width: 1000px;
     margin: auto;
-    padding-top: 120px;
+    padding-top: 170px;
 }
 .title {
     font-size: 45px;
@@ -46,7 +46,7 @@
 }
 .filter__item {
     width: 200px;
-    background: white;
+    background: #fffdf5;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -61,7 +61,7 @@
 /* Recetas */
 .recetas__container {
     width: 100%;
-    padding: 50px 20px;
+    padding: 50px 20px 100px 20px;
 }
 .recetas__inner__container {
     width: 100%;
@@ -74,7 +74,8 @@
 }
 .receta__container {
     //width: 220px;
-    background: white;
+    min-height: 290px;
+    background: #fffdf5;
     border-radius: 10px;
 }
 .receta__img {

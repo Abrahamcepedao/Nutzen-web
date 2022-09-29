@@ -5,7 +5,7 @@ import styles from '../styles/components/Recetas.module.css'
 
 /* Images */
 import Image from 'next/image'
-import Wave from '../public/img/landing/wave1.svg'
+import Wave from '../public/img/landing/wave2.svg'
 
 const Products: NextPage = () => {
     return (
