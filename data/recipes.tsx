@@ -1,4 +1,15 @@
-const recipes = [
+interface Recipe {
+    id: number;
+    type: string;
+    title: string;
+    subtitle: string;
+    img: string;
+    ingredients: string[];
+    proceso: string[];
+    notas: string[];
+}
+
+const recipes: Recipe[] = [
     {
         id: 1,
         type: 'Desayunos',

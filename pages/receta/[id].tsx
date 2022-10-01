@@ -16,11 +16,27 @@ import Footer from '../../components/Footer'
 /* Data */
 import { recipes } from '../../data/recipes'
 
+interface Recipe {
+    id: number;
+    type: string;
+    title: string;
+    subtitle: string;
+    img: string;
+    ingredients: string[];
+    proceso: string[];
+    notas: string[];
+}
+
 //@ts-ignore
 const Recipe = ({ id }) => {
+    const [recipe, setRecipe] = useState<Recipe | undefined>(undefined);
 
     useEffect(() => {
         console.log(id)
+
+        const recipe = recipes.find(recipe => recipe.id === parseInt(id))
+        console.log(recipe)
+        setRecipe(recipe);
 
     })
 
@@ -48,6 +64,7 @@ const Recipe = ({ id }) => {
             </div>
 
             <h1>ID: {id}</h1>
+            <h1>Recipe: {recipe?.title}</h1>
 
             {/* Footer */}
             <Footer />
