@@ -32,22 +32,24 @@
     width: 100%;
     margin: 0 2px;
     padding: 20px;
+    text-align: center;
+    height: 300px;
 }
 .fact__item1 {
-    background: #F8EAE8;
+    background: #edd7a6;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    color: #F19779;
+    color: rgb(185, 158, 90);
 }
 .fact__item2 {
-    background: #F2F8EA;
-    color: #A9CC77;
+    background: #edaca1;
+    color: rgb(204, 107, 88);
 }
 .fact__item3 {
-    background: #EFEBE9;
+    background: #f2eade;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    color: #B1A09A;
+    color: #c9b18f;
 }
 .fact__img__container {
     width: 200px;

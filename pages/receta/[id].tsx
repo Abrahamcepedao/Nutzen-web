@@ -7,7 +7,7 @@ import Image from 'next/image'
 import Waves1 from '../../public/img/landing/wave1.svg'
 
 /* CSS */
-import styles from '../../styles/Recetas.module.css'
+import styles from '../../styles/Recipe.module.css'
 
 /* Components */
 import Header from '../../components/Header'
@@ -15,6 +15,12 @@ import Footer from '../../components/Footer'
 
 /* Data */
 import { recipes } from '../../data/recipes'
+
+/* Material UI - icons */
+import KitchenRoundedIcon from '@mui/icons-material/KitchenRounded';
+import ListAltRoundedIcon from '@mui/icons-material/ListAltRounded';
+import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
+import MarkUnreadChatAltRoundedIcon from '@mui/icons-material/MarkUnreadChatAltRounded';
 
 interface Recipe {
     id: number;
@@ -26,6 +32,8 @@ interface Recipe {
     proceso: string[];
     notas: string[];
 }
+
+const baseUrl = "/./img/recipes/";
 
 //@ts-ignore
 const Recipe = ({ id }) => {
@@ -60,11 +68,64 @@ const Recipe = ({ id }) => {
 
             {/* background image */}
             <div className={styles.title__container}>
-                <h1 className={styles.title}>Prueba nuestras deliciosas recetas</h1>
+                <h1 className={styles.title}>{recipe?.title}</h1>
             </div>
 
-            <h1>ID: {id}</h1>
-            <h1>Recipe: {recipe?.title}</h1>
+            <div className={styles.recipe__contaniner}>
+              <div className={styles.recipe__img} style={{backgroundImage: `url(${baseUrl}${recipe?.img})`}}></div>
+              <div className={styles.recipe__info}>
+                <div className={styles.recipe__ingredients}>
+                  <div className={styles.recipe__subtitle}>
+                    <KitchenRoundedIcon className={styles.icon1} />
+                    <h2>Ingredientes</h2>
+                  </div>
+                  <div>
+                    {recipe?.ingredients.map(ingredient => (
+                      <div className={styles.list__item}>
+                        <CircleRoundedIcon className={styles.icon2} />
+                        <p>{ingredient}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className={styles.recipe__process}>
+                  <div className={styles.recipe__subtitle}>
+                    <ListAltRoundedIcon className={styles.icon1} />
+                    <h2>Proceso</h2>
+                  </div>
+                  <div>
+                    {recipe?.proceso.map(process => (
+                      <div className={styles.list__item}>
+                        <CircleRoundedIcon className={styles.icon2} />
+                        <p>{process}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Notes */}
+                {/* @ts-ignore */}
+                {recipe?.notas.length > 0 && (
+                    <div className={styles.notes__container}>
+                      <div className={styles.recipe__subtitle}>
+                        <MarkUnreadChatAltRoundedIcon className={styles.icon1} />
+                        <h2>Notas</h2>
+                      </div>
+                      <div className={styles.notes__list}>
+                        {recipe?.notas.map(nota => (
+                          <div className={styles.notes__item}>
+                            <CircleRoundedIcon className={styles.icon2} />
+                            <p>{nota}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                )}
+              </div>
+            </div>
+
+            
+            
+
 
             {/* Footer */}
             <Footer />
