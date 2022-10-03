@@ -22,7 +22,7 @@ const Facts: NextPage = () => {
                   <Image className={styles.fact__img} src={Fact1} alt=""/>
                 </div>
                 {/* Text */}
-                <h3>100% natural</h3>
+                <h3>SIN ESTABILIZADORES NI CONSERVADORES</h3>
             </div>
             <div className={styles.fact__item2}>
                 {/* Image */}
@@ -30,7 +30,7 @@ const Facts: NextPage = () => {
                   <Image className={styles.fact__img} src={Fact2} alt=""/>
                 </div>
                 {/* Text */}
-                <h3>100% natural</h3>
+                <h3>INGREDIENTES NATURALES</h3>
             </div>
             <div className={styles.fact__item3}>
                 {/* Image */}
@@ -38,7 +38,7 @@ const Facts: NextPage = () => {
                   <Image className={styles.fact__img} src={Fact3} alt=""/>
                 </div>
                 {/* Text */}
-                <h3>100% natural</h3>
+                <h3>GRASA SALUDABLE</h3>
             </div>
 
           </div>

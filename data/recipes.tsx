@@ -15,7 +15,7 @@ const recipes: Recipe[] = [
         type: 'Desayunos',
         title: "Hot cakes de avena",
         subtitle: "Hot cakes super sanos y deliciosos",
-        img: "hotcakes.jpg",
+        img: "recipe1.jpg",
         ingredients: [
             "Crema de cacahuate",
             "1/2 taza de hojuelas de avena",
@@ -41,7 +41,7 @@ const recipes: Recipe[] = [
         type: 'Snacks',
         title: "Manzana decorada",
         subtitle: "Delicioso snack",
-        img: "manzana.jpg",
+        img: "recipe1.jpg",
         ingredients: [
             "Manzana",
             "Crema de cacahuate Original",
@@ -61,7 +61,7 @@ const recipes: Recipe[] = [
         type: 'Snacks',
         title: "Manzana con crema de cacahuate",
         subtitle: "Snack con energía",
-        img: "manzana.jpg",
+        img: "recipe1.jpg",
         ingredients: [
             "Manzana",
             "Crema de cacahuate Original",
@@ -71,7 +71,7 @@ const recipes: Recipe[] = [
             "Coloca la crema de cacahuate en un bowl pequeño",
         ],
         notas: [
-            " Este puede ser un snack o también perfecto como postre"
+            "Este puede ser un snack o también perfecto como postre"
         ]
     },
     {
@@ -79,7 +79,7 @@ const recipes: Recipe[] = [
         type: 'Postres',
         title: "Pan de muerto con crema de cacahuate",
         subtitle: "Has probado esta combinación?",
-        img: "pan.jpg",
+        img: "recipe1.jpg",
         ingredients: [
             "Crema de cachuate Original",
             "Pan de muerto",

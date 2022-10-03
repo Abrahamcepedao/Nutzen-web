@@ -5,7 +5,8 @@ import styles from '../styles/components/Recetas.module.css'
 
 /* Images */
 import Image from 'next/image'
-import Wave from '../public/img/landing/wave2.svg'
+import Wave from '../public/img/landing/wave1.svg'
+import Wave2 from '../public/img/landing/wave2.svg'
 
 const Products: NextPage = () => {
     return (
@@ -25,7 +26,7 @@ const Products: NextPage = () => {
                 </div>
             </div>
             <div className={styles.waves__container2}>
-                <Image className={styles.wave2} src={Wave} alt=""/>
+                <Image className={styles.wave2} src={Wave2} alt=""/>
             </div>
           
         </div>
