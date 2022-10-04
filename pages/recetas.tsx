@@ -13,6 +13,9 @@ import styles from '../styles/Recetas.module.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+/* Framer Motion */
+import { motion, AnimatePresence } from "framer-motion";
+
 /* Data */
 import { recipes } from '../data/recipes'
 
@@ -85,17 +88,31 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.recetas__container}>
-            <div className={styles.recetas__inner__container}>
-                {filteredRecipes.map(recipe => (
-                    <div key={recipe.id} className={styles.receta__container}>
-                        <div className={styles.receta__img}></div>
-                        <h4>{recipe.title}</h4>
-                        <Link href={`/receta/${recipe.id}`}>
-                            <button>Ver receta</button>
-                        </Link>
-                    </div>
-                ))}
-            </div>
+            <AnimatePresence exitBeforeEnter>
+                <motion.div
+                    key={filter ? filter : "empty"}
+                    initial={{ y: 10, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -10, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                >
+                    {filteredRecipes.length > 0 ? (
+                        <div className={styles.recetas__inner__container}>
+                            {filteredRecipes.map(recipe => (
+                                <div key={recipe.id} className={styles.receta__container}>
+                                    <div className={styles.receta__img}></div>
+                                    <h4>{recipe.title}</h4>
+                                    <Link href={`/receta/${recipe.id}`}>
+                                        <button>Ver receta</button>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <>No hay recetas</>
+                    )}
+                </motion.div>
+            </AnimatePresence>
         </div>
 
         {/* Footer */}
