@@ -1,10 +1,11 @@
 .main {
   min-height: 100vh;
+  overflow: hidden !important;
 }
 
 /* landing */
 .waves__container1, .waves__container2 {
-  width: 100%;
+  width: 100vw;
   height: 20px;
 }
 .waves__container1 {
@@ -16,6 +17,7 @@
 .wave1, .wave2 {
   z-index: 7;
   width: 100vw !important;
+  max-width: 100vw !important;
 }
 .wave1 {
   transform: rotate(180deg);
@@ -86,3 +88,7 @@
   z-index: 3;
 }
 
+/* 1350px */
+@media screen and (max-width: 1350px) {
+  
+}
