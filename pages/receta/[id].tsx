@@ -16,11 +16,22 @@ import Footer from '../../components/Footer'
 /* Data */
 import { recipes } from '../../data/recipes'
 
+/* Material UI */
+import Badge, { BadgeProps } from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
+import Popper from '@mui/material/Popper';
+// web.cjs is required for IE11 support
+import { useSpring, animated } from 'react-spring';
+import Tooltip from '@mui/material/Tooltip';
+
 /* Material UI - icons */
 import KitchenRoundedIcon from '@mui/icons-material/KitchenRounded';
 import ListAltRoundedIcon from '@mui/icons-material/ListAltRounded';
 import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
 import MarkUnreadChatAltRoundedIcon from '@mui/icons-material/MarkUnreadChatAltRounded';
+import HighlightOffRoundedIcon from '@mui/icons-material/HighlightOffRounded';
+import ArrowCircleLeftRoundedIcon from '@mui/icons-material/ArrowCircleLeftRounded';
+import { IconButton } from '@mui/material'
 
 interface Recipe {
     id: number;
@@ -35,9 +46,60 @@ interface Recipe {
 
 const baseUrl = "/./img/recipes/";
 
+interface FadeProps {
+  children?: React.ReactElement;
+  in?: boolean;
+  onEnter?: () => void;
+  onExited?: () => void;
+}
+
+const Fade = React.forwardRef<HTMLDivElement, FadeProps>(function Fade(props, ref) {
+  const { in: open, children, onEnter, onExited, ...other } = props;
+  const style = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: open ? 1 : 0 },
+    onStart: () => {
+      if (open && onEnter) {
+        onEnter();
+      }
+    },
+    onRest: () => {
+      if (!open && onExited) {
+        onExited();
+      }
+    },
+  });
+
+  return (
+    <animated.div ref={ref} style={style} {...other}>
+      {children}
+    </animated.div>
+  );
+});
+
+
+const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -3,
+    top: 13,
+    border: `2px solid #FCF2E6`,
+    padding: '0 4px',
+  },
+}));
+
 //@ts-ignore
 const Recipe = ({ id }) => {
     const [recipe, setRecipe] = useState<Recipe | undefined>(undefined);
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const [open, setOpen] = React.useState(false);
+
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+      setAnchorEl(event.currentTarget);
+      setOpen((previousOpen) => !previousOpen);
+    };
+    
+    const canBeOpen = open && Boolean(anchorEl);
+    const popperID = canBeOpen ? 'spring-popper' : undefined;
 
     useEffect(() => {
         console.log(id)
@@ -68,7 +130,53 @@ const Recipe = ({ id }) => {
 
             {/* background image */}
             <div className={styles.title__container}>
-                <h1 className={styles.title}>{recipe?.title}</h1>
+                <div>
+                  <h1 className={styles.title}>{recipe?.title}</h1>
+                </div>
+                <div>
+                  <Link href={"/recetas"}>
+                    <Tooltip title="Regresar a recetas">
+                      <IconButton>
+                        <ArrowCircleLeftRoundedIcon className={styles.icon}/>
+                      </IconButton>
+                    </Tooltip>
+                  </Link>
+                  {/* @ts-ignore */}
+                  {recipe?.notas.length > 0 && (
+                    <IconButton aria-describedby={popperID} type="button" onClick={handleClick}>
+                      {open ? <HighlightOffRoundedIcon className={styles.icon}/> : (
+                        <StyledBadge badgeContent={recipe?.notas.length} color="error">
+                          <MarkUnreadChatAltRoundedIcon className={styles.icon}/>
+                        </StyledBadge>
+                      )}
+                    </IconButton>
+                  )}
+                  
+                </div>
+                <Popper id={id} open={open} anchorEl={anchorEl} placement="left-start" transition>
+                  {({ TransitionProps }) => (
+                    <Fade {...TransitionProps}>
+                      <>
+                        {/* @ts-ignore */}
+                        {recipe?.notas.length > 0 && (
+                            <div className={styles.notes__container}>
+                              <div className={styles.recipe__subtitle}>
+                                <h2>Notas</h2>
+                              </div>
+                              <div className={styles.notes__list}>
+                                {recipe?.notas.map(nota => (
+                                  <div className={styles.notes__item}>
+                                    <CircleRoundedIcon className={styles.icon2} />
+                                    <p>{nota}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                        )}
+                      </>
+                    </Fade>
+                  )}
+                </Popper>
             </div>
 
             <div className={styles.recipe__contaniner}>
@@ -102,24 +210,6 @@ const Recipe = ({ id }) => {
                     ))}
                   </div>
                 </div>
-                {/* Notes */}
-                {/* @ts-ignore */}
-                {recipe?.notas.length > 0 && (
-                    <div className={styles.notes__container}>
-                      <div className={styles.recipe__subtitle}>
-                        <MarkUnreadChatAltRoundedIcon className={styles.icon1} />
-                        <h2>Notas</h2>
-                      </div>
-                      <div className={styles.notes__list}>
-                        {recipe?.notas.map(nota => (
-                          <div className={styles.notes__item}>
-                            <CircleRoundedIcon className={styles.icon2} />
-                            <p>{nota}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                )}
               </div>
             </div>
 

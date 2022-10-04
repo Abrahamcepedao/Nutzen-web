@@ -33,7 +33,8 @@ const recipes: Recipe[] = [
             "Licuar todos los ingredientes, cocina y disfruta con miel maple o crema de cacahuate"
         ],
         notas: [
-            "Huevos de linaza: mezcla 1 cucharada de linaza con 3 cucharadas de agua, revuelve y deja reposar por unos 10 minutos."
+            "Huevos de linaza: mezcla 1 cucharada de linaza con 3 cucharadas de agua, revuelve y deja reposar por unos 10 minutos.",
+            "Nota 2"
         ],
     },
     {
