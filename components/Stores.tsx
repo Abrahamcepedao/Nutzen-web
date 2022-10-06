@@ -26,7 +26,7 @@ const Stores: NextPage = () => {
                     </div>
                 </Link>
                 <Link href={"https://www.instagram.com/vps.supp.store/?utm_medium=copy_link"}>
-                    <div className={styles.store__img__container}>
+                    <div className={styles.store__img__container3}>
                         <Image className={styles.store__img} src={Tienda3} alt=""/>
                     </div>
                 </Link>
