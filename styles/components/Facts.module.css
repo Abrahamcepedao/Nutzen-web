@@ -54,3 +54,30 @@
 .fact__img__container {
     width: 200px;
 }
+
+/* 768 */
+@media screen and (max-width: 768px) { 
+    .facts__container h2 {
+        font-size: 30px;
+    }
+    .facts__inner__container {
+        display: block;
+    }
+    .fact__item1, .fact__item2 {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 2px;
+    }
+    .fact__item1 {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .fact__item3 {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+    .fact__img__container {
+        width: 150px;
+    }
+}
