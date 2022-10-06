@@ -47,6 +47,7 @@
 }
 .title {
   color: #383434;
+  font-size: 45px;
 }
 .action__btn {
   background: #FF5454;
@@ -90,5 +91,90 @@
 
 /* 1350px */
 @media screen and (max-width: 1350px) {
-  
+  .plate__container1 {
+    left: 15%;
+    width: 200px;
+  }
+  .plate__container2 {
+    width: 400px;
+  }
+  .plate__container3 {
+    width: 400px;
+  }
+}
+
+
+/* 1180px */
+@media screen and (max-width: 1180px) {
+  .plate__container1 {
+    left: 10%;
+    width: 200px;
+  }
+  .plate__container2 {
+    width: 350px;
+  }
+  .plate__container3 {
+    width: 350px;
+  }
+}
+
+/* 1040px */
+@media screen and (max-width: 1040px) {
+  .plate__container1 {
+    left: 12%;
+    width: 15%;
+  }
+  .plate__container2 {
+    width: 30%;
+  }
+  .plate__container3 {
+    width: 25%;
+  }
+}
+
+/* 768 */
+@media screen and (max-width: 768px) {
+  .landing__container {
+    height: 800px;
+    min-height: 800px;
+  }
+  .landing__inner__container {
+    height: auto;
+  }
+  .plate__container1 {
+    left: 15%;
+    width: 30%;
+  }
+  .plate__container2 {
+    width: 50%;
+    top: 620px;
+    bottom: -40px;
+  }
+  .plate__container3 {
+    width: 40%;
+  }
+  .landing__inner__container {
+    width: 70%;
+    max-width: 300px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+/* 450px */
+@media screen and (max-width: 450px) {
+  .landing__container {
+    height: 800px;
+    min-height: 800px;
+  }
+  .plate__container1 {
+    left: 2%;  
+  }
+  .plate__container2 {
+    top: 680px;
+  }
+  .waves__container1, .waves__container2 {
+    height: 10px;
+  }
 }

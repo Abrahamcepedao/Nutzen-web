@@ -3,9 +3,9 @@
     background: #fffdf5;
     width: 100%;
     z-index: 9999999999;
-    margin-top: 20px;
     padding-top: 100px;
     padding-bottom: 50px;
+    position: relative;
 }
 .facts__container h2 {
     font-size: 35px;
