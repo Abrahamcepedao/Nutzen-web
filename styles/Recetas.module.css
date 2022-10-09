@@ -39,7 +39,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     color: #383434;
-    width: 100%;
+    width: 95%;
     max-width: 1000px;
     margin: auto;
     font-weight: 600;
@@ -52,6 +52,7 @@
     cursor: pointer;
     transition: transform 450ms;
     box-shadow: 0 14px 20px -6px rgb(76 79 106 / 30%);
+    margin: 0 auto;
 }
 .filter__item:hover {
     transform: scale(1.1);
@@ -106,4 +107,57 @@
 }
 .receta__container button:hover {
     transform: scale(1.1);
+}
+
+/* 900 */
+@media screen and (max-width: 900px) { 
+    .filters__inner__container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+    }
+}
+
+/* 768 */
+@media screen and (max-width: 768px) { 
+    .title {
+        font-size: 30px;
+        text-align: center;
+    }
+    .recetas__container {
+        padding: 50px 20px 100px 20px;
+    }
+    .recetas__inner__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 600 */
+@media screen and (max-width: 600px) { 
+    .recetas__inner__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 480 */
+@media screen and (max-width: 480px) { 
+    .filters__inner__container {
+        //max-width: 300px;
+    }
+    .filter__item {
+        width: 150px;
+    }
+    .title__container {
+        padding-top: 70px;
+    }
+    .recetas__container {
+        padding: 20px 10px 50px 10px;
+    }
+}
+
+
+/* 430 */
+@media screen and (max-width: 430px) { 
+    .recetas__inner__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
