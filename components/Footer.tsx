@@ -28,20 +28,20 @@ const Stores: NextPage = () => {
                 </div>
                 <div className={styles.footer__contact}>
                     <div>
-                        <LocalPhoneRoundedIcon className={styles.footer__icon}/>
+                        <LocalPhoneRoundedIcon fontSize="small" className={styles.footer__icon}/>
                         <p>(999) 908 8092</p>
                     </div>
                     <div>
-                        <EmailRoundedIcon className={styles.footer__icon}/>
+                        <EmailRoundedIcon fontSize="small" className={styles.footer__icon}/>
                         <p>quieronutzen@nutzen.mx</p>
                     </div>
                 </div>
                 <div className={styles.footer__socials}>
                     <a href="https://www.instagram.com/nutzenmx/" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} className={styles.icon}/>
+                        <FontAwesomeIcon size="2x" icon={faInstagram} className={styles.icon}/>
                     </a>
                     <a href="https://www.facebook.com/nutzenmx/" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} className={styles.icon}/>
+                        <FontAwesomeIcon size="2x" icon={faFacebook} className={styles.icon}/>
                     </a>
                     <br/>
                     <Link href={"/recetas"}>

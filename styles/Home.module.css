@@ -13,6 +13,10 @@
   top: 60px;
   z-index: 9;
 }
+.waves__container2 {
+  background: #FDF4E5;
+  height: 40px;
+}
 /* waves */
 .wave1, .wave2 {
   z-index: 7;
@@ -31,7 +35,7 @@
   z-index: 2;
   background: #FDF4E5;
   min-height: 70vh;
-  margin-bottom: -40px;
+  margin-bottom: -20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,18 +76,18 @@
 }
 .plate__container1 {
   top: 60px;
-  left: 20%;
-  width: 250px;
+  left: 16%;
+  width: 230px;
 }
 .plate__container2 {
   bottom: calc(20vh + 20px) ;
   left: 10px;
-  width: 500px;
+  width: 26%;
 }
 .plate__container3 {
   top: 50px;
-  right: -50px;
-  width: 500px;
+  right: 0px;
+  width: 24%;
 }
 .plate1, .plate2, .plate3 {
   z-index: 3;
@@ -92,14 +96,14 @@
 /* 1350px */
 @media screen and (max-width: 1350px) {
   .plate__container1 {
-    left: 15%;
+    left: 12%;
     width: 200px;
   }
   .plate__container2 {
     width: 400px;
   }
   .plate__container3 {
-    width: 400px;
+    width: 320px;
   }
 }
 
@@ -114,7 +118,7 @@
     width: 350px;
   }
   .plate__container3 {
-    width: 350px;
+    width: 300px;
   }
 }
 
@@ -125,10 +129,13 @@
     width: 15%;
   }
   .plate__container2 {
-    width: 30%;
+    width: 30%;;
   }
   .plate__container3 {
-    width: 25%;
+    width: 20%;
+  }
+  .waves__container2 {
+    height: 20px;
   }
 }
 
@@ -151,7 +158,7 @@
     bottom: -40px;
   }
   .plate__container3 {
-    width: 40%;
+    width: 35%;
   }
   .landing__inner__container {
     width: 70%;

@@ -2,7 +2,7 @@
 .facts__container {
     background: #fffdf5;
     width: 100%;
-    z-index: 9999999999;
+    z-index: 10;
     padding-top: 100px;
     padding-bottom: 50px;
     position: relative;

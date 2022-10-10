@@ -24,9 +24,6 @@
     transform: scale(1.1);
 }
 .drawer {
-    background: white;
-    position: fixed;
-    top: 60px;
-    left: 20px;
-    border-radius: 10px;
+    position: relative;
+    z-index: 11;
 }
