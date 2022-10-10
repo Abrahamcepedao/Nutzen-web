@@ -46,7 +46,9 @@
 .icon {
     color: #383434;
     margin-left: 10px;
+    width: 30px;
     transition: transform 450ms;
+    position: relative;
 }
 .icon:hover {
     transform: scale(1.1);
