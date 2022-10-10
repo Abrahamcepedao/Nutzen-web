@@ -104,7 +104,7 @@ const Recipe = ({ id }) => {
     useEffect(() => {
         const recipe = recipes.find(recipe => recipe.id === parseInt(id))
         setRecipe(recipe);
-    })
+    },[id])
 
     return (
         <div>
@@ -235,14 +235,14 @@ export async function getStaticProps(ctx) {
     },
   };
 }
+
 export async function getStaticPaths() {
+  const paths = recipes.map((recipe) => ({
+    params: { id: recipe.id.toString() },
+  }));
   return {
-    paths: [// String variant:
-      '/receta/[id]',
-      // Object variant:
-      { params: { id: 'id' } },
-    ],
-    fallback: true
+    paths: paths,
+    fallback: false
   }
 }
 
