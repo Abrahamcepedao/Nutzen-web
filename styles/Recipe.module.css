@@ -6,11 +6,11 @@
 /* landing */
 .waves__container1{
   width: 100%;
-  height: 100px;
+  height: 20px;
   position: fixed;
   top: 60px;
   z-index: 9;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 /* waves */
 .wave1 {
@@ -106,7 +106,6 @@
     width: 95%;
     max-width: 400px;
     margin: auto;
-    padding-bottom: 50px;
     background: #fffdf5;
     padding: 10px 20px;
     border-radius: 10px;
@@ -147,6 +146,9 @@
         font-size: 30px;
         text-align: center;
     }
+    .recipe__subtitle h2 {
+        font-size: 25px;
+    }
 }
 
 /* 440 */
@@ -162,5 +164,13 @@
     }
     .recipe__info {
         grid-template-columns: auto;
+    }
+    .notes__container {
+        max-width: 75vw;
+        padding: 5px 10px;
+    }
+    .notes__item p {
+        margin: 4px;
+        font-size: 12px;
     }
 }
