@@ -37,10 +37,10 @@ const Stores: NextPage = () => {
                     </div>
                 </div>
                 <div className={styles.footer__socials}>
-                    <a href="https://www.instagram.com/nutzenmx/" target="_blank">
+                    <a href="https://www.instagram.com/nutzenmx/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faInstagram} className={styles.icon}/>
                     </a>
-                    <a href="https://www.facebook.com/nutzenmx/" target="_blank">
+                    <a href="https://www.facebook.com/nutzenmx/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faFacebook} className={styles.icon}/>
                     </a>
                     <br/>

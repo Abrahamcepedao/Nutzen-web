@@ -100,7 +100,7 @@ const Home: NextPage = () => {
                         <div className={styles.recetas__inner__container}>
                             {filteredRecipes.map(recipe => (
                                 <div key={recipe.id} className={styles.receta__container}>
-                                    <div className={styles.receta__img}></div>
+                                    <div className={styles.receta__img} style={{backgroundImage: `url(/img/recipes/${recipe.img})`}}></div>
                                     <h4>{recipe.title}</h4>
                                     <Link href={`/receta/${recipe.id}`}>
                                         <button>Ver receta</button>

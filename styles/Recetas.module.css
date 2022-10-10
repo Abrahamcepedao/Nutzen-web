@@ -74,7 +74,6 @@
     grid-gap: 20px;
 }
 .receta__container {
-    //width: 220px;
     min-height: 290px;
     background: #fffdf5;
     border-radius: 10px;
@@ -84,7 +83,6 @@
     height: 150px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    background-image: url('../public/img/recipes/recipe1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -140,9 +138,6 @@
 
 /* 480 */
 @media screen and (max-width: 480px) { 
-    .filters__inner__container {
-        //max-width: 300px;
-    }
     .filter__item {
         width: 150px;
     }
@@ -153,7 +148,6 @@
         padding: 20px 10px 50px 10px;
     }
 }
-
 
 /* 430 */
 @media screen and (max-width: 430px) { 
