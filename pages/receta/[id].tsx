@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -20,6 +19,7 @@ import { recipes } from '../../data/recipes'
 import Badge, { BadgeProps } from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import Popper from '@mui/material/Popper';
+
 // web.cjs is required for IE11 support
 import { useSpring, animated } from 'react-spring';
 import Tooltip from '@mui/material/Tooltip';
@@ -102,12 +102,8 @@ const Recipe = ({ id }) => {
     const popperID = canBeOpen ? 'spring-popper' : undefined;
 
     useEffect(() => {
-        console.log(id)
-
         const recipe = recipes.find(recipe => recipe.id === parseInt(id))
-        console.log(recipe)
         setRecipe(recipe);
-
     })
 
     return (
@@ -164,8 +160,8 @@ const Recipe = ({ id }) => {
                                 <h2>Notas</h2>
                               </div>
                               <div className={styles.notes__list}>
-                                {recipe?.notas.map(nota => (
-                                  <div className={styles.notes__item}>
+                                {recipe?.notas.map((nota, i) => (
+                                  <div key={i} className={styles.notes__item}>
                                     <CircleRoundedIcon className={styles.icon2} />
                                     <p>{nota}</p>
                                   </div>
@@ -188,8 +184,8 @@ const Recipe = ({ id }) => {
                     <h2>Ingredientes</h2>
                   </div>
                   <div>
-                    {recipe?.ingredients.map(ingredient => (
-                      <div className={styles.list__item}>
+                    {recipe?.ingredients.map((ingredient, i) => (
+                      <div key={i} className={styles.list__item}>
                         <CircleRoundedIcon className={styles.icon2} />
                         <p>{ingredient}</p>
                       </div>
@@ -202,8 +198,8 @@ const Recipe = ({ id }) => {
                     <h2>Proceso</h2>
                   </div>
                   <div>
-                    {recipe?.proceso.map(process => (
-                      <div className={styles.list__item}>
+                    {recipe?.proceso.map((process, i) => (
+                      <div key={i} className={styles.list__item}>
                         <CircleRoundedIcon className={styles.icon2} />
                         <p>{process}</p>
                       </div>
