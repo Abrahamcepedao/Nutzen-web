@@ -122,10 +122,10 @@ const Header: NextPage = () => {
                 {/* socials */}
                 <div>
                     <a href="https://www.instagram.com/nutzenmx/" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} className={styles.icon}/>
+                        <FontAwesomeIcon icon={faInstagram} size="2x" className={styles.icon}/>
                     </a>
                     <a href="https://www.facebook.com/nutzenmx/" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} className={styles.icon}/>
+                        <FontAwesomeIcon icon={faFacebook} size="2x" className={styles.icon}/>
                     </a>
                 </div>
             </div>

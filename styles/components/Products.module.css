@@ -79,7 +79,7 @@
     max-width: 580px;
 }
 .product__icon1, .product__icon2 {
-    font-size: 120px;
+    font-size: 120px !important;
     margin-right: 10px;
 }
 .product__icon1 {
@@ -195,7 +195,7 @@
         font-size: 15px;
     }
     .product__icon1, .product__icon2 {
-        font-size: 100px;
+        font-size: 100px !important;
     }
     .product__quote p {
         font-size: 20px;
