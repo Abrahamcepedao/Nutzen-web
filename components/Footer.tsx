@@ -6,7 +6,6 @@ import styles from '../styles/components/Footer.module.css'
 /* Images */
 import Image from 'next/image'
 import Logo from '../public/img/landing/nutzen_logo.png'
-import Wave from '../public/img/landing/wave1.svg'
 
 /* Material UI - icons */
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
@@ -19,9 +18,6 @@ import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
 const Stores: NextPage = () => {
     return (
         <div className={styles.footer} id="contacto">
-            <div className={styles.wave__container}>
-                <Image src={Wave} className={styles.wave} alt=""/>
-            </div>
             <div className={styles.footer__info}>
                 <div className={styles.footer__logo}>
                     <Image src={Logo} alt="Nutzen"/>

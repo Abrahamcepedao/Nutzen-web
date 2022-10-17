@@ -59,7 +59,7 @@ const Header: NextPage = () => {
                 <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
-                            <HomeRoundedIcon/>
+                            <HomeRoundedIcon className={styles.menu__icon}/>
                         </ListItemIcon>
                         <ListItemText primary={"Inicio"} />
                     </ListItemButton>
@@ -69,7 +69,7 @@ const Header: NextPage = () => {
                 <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
-                            <LocalGroceryStoreRoundedIcon/>
+                            <LocalGroceryStoreRoundedIcon className={styles.menu__icon}/>
                         </ListItemIcon>
                         <ListItemText primary={"Productos"} />
                     </ListItemButton>
@@ -79,7 +79,7 @@ const Header: NextPage = () => {
                 <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
-                            <StorefrontRoundedIcon/>
+                            <StorefrontRoundedIcon className={styles.menu__icon}/>
                         </ListItemIcon>
                         <ListItemText primary={"Tiendas"} />
                     </ListItemButton>
@@ -89,7 +89,7 @@ const Header: NextPage = () => {
                 <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
-                            <MenuBookRoundedIcon/>
+                            <MenuBookRoundedIcon className={styles.menu__icon}/>
                         </ListItemIcon>
                         <ListItemText primary={"Recetas"} />
                     </ListItemButton>
@@ -99,7 +99,7 @@ const Header: NextPage = () => {
                 <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemIcon>
-                            <ContactPhoneRoundedIcon/>
+                            <ContactPhoneRoundedIcon className={styles.menu__icon}/>
                         </ListItemIcon>
                         <ListItemText primary={"Contacto"} />
                     </ListItemButton>

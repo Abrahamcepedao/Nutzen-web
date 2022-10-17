@@ -4,22 +4,6 @@
 }
 
 /* landing */
-.waves__container1{
-  width: 100%;
-  height: 20px;
-  position: fixed;
-  top: 60px;
-  z-index: 9;
-  margin-bottom: 0px;
-}
-/* waves */
-.wave1 {
-  z-index: 7;
-  width: 100vw !important;
-}
-.wave1 {
-  transform: rotate(180deg);
-}
 
 /* landing info */
 .title__container {

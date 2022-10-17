@@ -1,5 +1,4 @@
 .footer {
-    //background: #FCF2E6;
     background: #fffdf5;
 }
 /* Waves */
@@ -54,7 +53,7 @@
     transform: scale(1.1);
 }
 .footer__btn {
-  background: #FF5454;
+  background: #9C713F;
   color: #fffdf5;
   border: none;
   border-radius: 50px;
