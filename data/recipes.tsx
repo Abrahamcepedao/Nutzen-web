@@ -9,10 +9,11 @@ interface Recipe {
     notas: string[];
 }
 
+
 const recipes: Recipe[] = [
     {
         id: 1,
-        type: 'Desayunos',
+        type: 'Dulce',
         title: "Hot cakes de avena",
         subtitle: "Hot cakes super sanos y deliciosos",
         img: "recipe1.jpg",
@@ -39,7 +40,7 @@ const recipes: Recipe[] = [
     },
     {
         id: 2,
-        type: 'Snacks',
+        type: 'Salada',
         title: "Manzana decorada",
         subtitle: "Delicioso snack",
         img: "recipe2.jpg",
@@ -59,7 +60,7 @@ const recipes: Recipe[] = [
     },
     {
         id: 3,
-        type: 'Snacks',
+        type: 'Salada',
         title: "Manzana con crema de cacahuate",
         subtitle: "Snack con energía",
         img: "recipe3.jpg",
@@ -77,7 +78,7 @@ const recipes: Recipe[] = [
     },
     {
         id: 4,
-        type: 'Postres',
+        type: 'Dulce',
         title: "Pan de muerto con crema de cacahuate",
         subtitle: "Has probado esta combinación?",
         img: "recipe4.jpg",
