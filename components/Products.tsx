@@ -28,9 +28,9 @@ const Products: NextPage = () => {
                     <Image src={PBNatural} alt=""/>
                 </div>
                 <div className={styles.product__info1}>
-                    <h3>NATURAL</h3>
+                    <h3>ORIGINAL</h3>
                     <h5>Ingredientes</h5>
-                    <p>CACAHUATE, MATCHA, ERITRITOL - FRUTA DEL MONJE</p>
+                    <p>CACAHUATE Y MIEL DE AGAVE</p>
                     <div className={styles.product__quote}>
                         <FormatQuoteRoundedIcon className={styles.product__icon1}/>
                         <p>¡Crema de cacahuate natural perfecta para deportistas que buscan mantener una vida sana!</p>

@@ -27,4 +27,8 @@
 .drawer {
     position: relative;
     z-index: 11;
+    color: #383434;
+}
+.menu__icon {
+    color: #383434;
 }

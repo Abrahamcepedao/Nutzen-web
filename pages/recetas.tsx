@@ -2,9 +2,6 @@ import type { NextPage } from 'next'
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-/* Images */
-import Image from 'next/image'
-import Waves1 from '../public/img/landing/wave1.svg'
 
 /* CSS */
 import styles from '../styles/Recetas.module.css'
@@ -44,8 +41,6 @@ const Home: NextPage = () => {
     }
     
 
-
-
   return (
     <div>
       <Head>
@@ -59,10 +54,6 @@ const Home: NextPage = () => {
         <Header />
 
         {/* landing */}
-        {/* wave */}
-        <div className={styles.waves__container1}>
-          <Image className={styles.wave1} src={Waves1} alt=""/>
-        </div>
 
         {/* background image */}
         <div className={styles.title__container}>
@@ -72,17 +63,14 @@ const Home: NextPage = () => {
         {/* Filters */}
         <div className={styles.filters__container}>
             <div className={styles.filters__inner__container}>
-                <div className={styles.filter__item} style={{background: filter === "all" ? "#FF5454" : "#fffdf5", color: filter === "all" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("all")}}>
-                    <p>Todos</p>
+                <div className={styles.filter__item} style={{background: filter === "all" ? "#C65E4D" : "#fffdf5", color: filter === "all" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("all")}}>
+                    <p>Todas</p>
                 </div>
-                <div className={styles.filter__item} style={{background: filter === "Desayunos" ? "#FF5454" : "#fffdf5", color: filter === "Desayunos" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Desayunos")}}>
-                    <p>Desayunos</p>
+                <div className={styles.filter__item} style={{background: filter === "Desayunos" ? "#C65E4D" : "#fffdf5", color: filter === "Desayunos" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Desayunos")}}>
+                    <p>Saladas</p>
                 </div>
-                <div className={styles.filter__item} style={{background: filter === "Snacks" ? "#FF5454" : "#fffdf5", color: filter === "Snacks" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Snacks")}}>
-                    <p>Snacks</p>
-                </div>
-                <div className={styles.filter__item} style={{background: filter === "Postres" ? "#FF5454" : "#fffdf5", color: filter === "Postres" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Postres")}}>
-                    <p>Postres</p>
+                <div className={styles.filter__item2} style={{background: filter === "Snacks" ? "#C65E4D" : "#fffdf5", color: filter === "Snacks" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Snacks")}}>
+                    <p>Dulces</p>
                 </div>
             </div>
         </div>
@@ -119,10 +107,6 @@ const Home: NextPage = () => {
         <Footer />
 
       </main>
-
-      <footer className={styles.footer}>
-       
-      </footer>
     </div>
   )
 }

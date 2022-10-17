@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-/* Images */
-import Image from 'next/image'
-import Waves1 from '../../public/img/landing/wave1.svg'
 
 /* CSS */
 import styles from '../../styles/Recipe.module.css'
@@ -119,10 +116,6 @@ const Recipe = ({ id }) => {
             <Header />
 
             {/* landing */}
-            {/* wave */}
-            <div className={styles.waves__container1}>
-            <Image className={styles.wave1} src={Waves1} alt=""/>
-            </div>
 
             {/* background image */}
             <div className={styles.title__container}>
