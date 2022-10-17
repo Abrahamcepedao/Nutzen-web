@@ -35,6 +35,7 @@ const Products: NextPage = () => {
                         <FormatQuoteRoundedIcon className={styles.product__icon1}/>
                         <p>¡Crema de cacahuate natural perfecta para deportistas que buscan mantener una vida sana!</p>
                     </div>
+                    <h5>Dos presentaciones</h5>
                     <p>200gr ($105) y 300gr ($145)</p>
                 </div>
             </div>
