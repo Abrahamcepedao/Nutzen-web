@@ -66,10 +66,10 @@ const Home: NextPage = () => {
                 <div className={styles.filter__item} style={{background: filter === "all" ? "#C65E4D" : "#fffdf5", color: filter === "all" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("all")}}>
                     <p>Todas</p>
                 </div>
-                <div className={styles.filter__item} style={{background: filter === "Desayunos" ? "#C65E4D" : "#fffdf5", color: filter === "Desayunos" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Salada")}}>
+                <div className={styles.filter__item} style={{background: filter === "Desayunos" ? "#C65E4D" : "#fffdf5", color: filter === "Salada" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Salada")}}>
                     <p>Saladas</p>
                 </div>
-                <div className={styles.filter__item2} style={{background: filter === "Snacks" ? "#C65E4D" : "#fffdf5", color: filter === "Snacks" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Dulce")}}>
+                <div className={styles.filter__item2} style={{background: filter === "Snacks" ? "#C65E4D" : "#fffdf5", color: filter === "Dulce" ? "#fffdf5" : "#383434"}} onClick={() => {handleFilterChange("Dulce")}}>
                     <p>Dulces</p>
                 </div>
             </div>
