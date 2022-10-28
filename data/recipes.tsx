@@ -4,6 +4,7 @@ interface Recipe {
     title: string;
     subtitle: string;
     img: string;
+    time: string;
     ingredients: string[];
     proceso: string[];
     notas: string[];
@@ -17,6 +18,7 @@ const recipes: Recipe[] = [
         title: "Hot cakes de avena",
         subtitle: "Hot cakes super sanos y deliciosos",
         img: "recipe1.jpg",
+        time: "15 - 20 min",
         ingredients: [
             "Crema de cacahuate",
             "1/2 taza de hojuelas de avena",
@@ -44,6 +46,7 @@ const recipes: Recipe[] = [
         title: "Manzana decorada",
         subtitle: "Delicioso snack",
         img: "recipe2.jpg",
+        time: "5 min",
         ingredients: [
             "Manzana",
             "Crema de cacahuate Original",
@@ -64,6 +67,7 @@ const recipes: Recipe[] = [
         title: "Manzana con crema de cacahuate",
         subtitle: "Snack con energía",
         img: "recipe3.jpg",
+        time: "5 min",
         ingredients: [
             "Manzana",
             "Crema de cacahuate Original",
@@ -82,6 +86,7 @@ const recipes: Recipe[] = [
         title: "Pan de muerto con crema de cacahuate",
         subtitle: "Has probado esta combinación?",
         img: "recipe4.jpg",
+        time: "10 min",
         ingredients: [
             "Crema de cachuate Original",
             "Pan de muerto",
