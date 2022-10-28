@@ -57,23 +57,61 @@
     grid-gap: 20px;
 }
 .receta__container {
-    min-height: 290px;
-    background: #fffdf5;
-    border-radius: 10px;
 }
-.receta__img {
+.receta__image {
+    height: 290px;
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 450ms;
+}
+.receta__image:hover {
+    transform: scale(1.02);
+}
+.receta__image div {
+    linear-gradient: (153deg, hsla(0, 0%, 100%, 0.24), hsla(0, 0%, 100%, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: #fff;
+    padding: 6px 16px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+/* .receta__img {
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     background-size: cover;
     background-position: center;
+} */
+.receta__info p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #E8CAA6;
+    margin: 0;
 }
 .receta__container h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
     color: #383434;
-    margin-left: 20px;
+    font-weight: bold;
 }
-.receta__container button {
+.receta_icon {
+    position: relative;
+    top: 5px;
+}
+/* .receta__container button {
     background: #C65E4D;
     color: #fffdf5;
     border: none;
@@ -88,7 +126,7 @@
 }
 .receta__container button:hover {
     transform: scale(1.1);
-}
+} */
 
 /* 900 */
 @media screen and (max-width: 900px) { 

@@ -16,6 +16,9 @@ import { motion, AnimatePresence } from "framer-motion";
 /* Data */
 import { recipes } from '../data/recipes'
 
+/* Material UI - icon */
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
 const Home: NextPage = () => {
     const [filter, setFilter] = useState('all')
     const [filteredRecipes, setFilteredRecipes] = useState(recipes)
@@ -88,11 +91,20 @@ const Home: NextPage = () => {
                         <div className={styles.recetas__inner__container}>
                             {filteredRecipes.map(recipe => (
                                 <div key={recipe.id} className={styles.receta__container}>
-                                    <div className={styles.receta__img} style={{backgroundImage: `url(/img/recipes/${recipe.img})`}}></div>
+                                    {/* <div className={styles.receta__img} style={{backgroundImage: `url(/img/recipes/${recipe.img})`}}></div>
                                     <h4>{recipe.title}</h4>
                                     <Link href={`/receta/${recipe.id}`}>
                                         <button>Ver receta</button>
+                                    </Link> */}
+                                    <Link href={`/receta/${recipe.id}`}>
+                                        <div className={styles.receta__image} style={{backgroundImage: `url(/img/recipes/${recipe.img})`}}>
+                                            <div>{recipe.type}</div>
+                                        </div>
                                     </Link>
+                                    <div className={styles.receta__info}>
+                                        <h4>{recipe.title}</h4>
+                                        <p><AccessTimeIcon className={styles.receta_icon}/> {recipe.time}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
