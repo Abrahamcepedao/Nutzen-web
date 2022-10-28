@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import React, { useState } from 'react'
 
 /* CSS */
 import styles from '../styles/components/Products.module.css'
@@ -16,7 +17,8 @@ import SinAzucar2 from '../public/img/landing/sinazucar2.png'
 import FormatQuoteRoundedIcon from '@mui/icons-material/FormatQuoteRounded';
 
 const Products: NextPage = () => {
-    
+    const [originalSize, setOriginalSize] = useState("0");
+    const [sinazucarSize, sinAzucarSize] = useState("1");
     
     return (
         <div className={styles.products__container} id="productos">
@@ -32,11 +34,16 @@ const Products: NextPage = () => {
                     <h5>Ingredientes</h5>
                     <p>CACAHUATE Y MIEL DE AGAVE</p>
                     <div className={styles.product__quote}>
-                        <FormatQuoteRoundedIcon className={styles.product__icon1}/>
                         <p>¡Crema de cacahuate natural perfecta para deportistas que buscan mantener una vida sana!</p>
                     </div>
-                    <h5>Dos presentaciones</h5>
-                    <p>200gr ($105) y 300gr ($145)</p>
+                    <div className={styles.product__picker1}>
+                        <h6>Tamaño:</h6>
+                        <select name="" id="" value={originalSize} onChange={(e) => {setOriginalSize(e.target.value)}}>
+                            <option value="0">200gr</option>
+                            <option value="1">300gr</option>
+                        </select>
+                        <p>${originalSize == "0" ? "105" : "145"}</p>
+                    </div>
                 </div>
             </div>
             {/* bottom */}
@@ -91,10 +98,16 @@ const Products: NextPage = () => {
                     <h5>Ingredientes</h5>
                     <p>CACAHUATE</p>
                     <div className={styles.product__quote}>
-                        <FormatQuoteRoundedIcon className={styles.product__icon2}/>
                         <p>¡Crema de cacahuate natural perfecta para deportistas que buscan mantener una vida sana!</p>
                     </div>
-                    <p>200gr ($105) y 300gr ($145)</p>
+                    <div className={styles.product__picker2}>
+                        <h6>Tamaño:</h6>
+                        <select name="" id="" value={originalSize} onChange={(e) => {setOriginalSize(e.target.value)}}>
+                            <option value="0">200gr</option>
+                            <option value="1">300gr</option>
+                        </select>
+                        <p>${originalSize == "0" ? "105" : "145"}</p>
+                    </div>
                 </div>
             </div>
             {/* bottom */}
